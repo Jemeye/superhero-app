@@ -34,17 +34,17 @@ export class ComicsComponent implements OnInit {
     this.getComicsBySuperhero();
   }
 
+  //function to get all the superheroes
   getSuperhero(){
     this.apiService.getSuperheroById(this.userId).subscribe((data) => {
-      console.log(data);
       this.superhero = data.data.results[0];
     })
 
   }
 
+  //function to get all the superheroes' comics by pages
   getComicsBySuperhero(){
     this.apiService.getComicsBySuperhero(this.userId).subscribe((data) => {
-      console.log(data);
       this.comics = data.data.results
     })
   }

@@ -1,7 +1,7 @@
 <div class="comic-card">
     <img [src]="comicData.miniature" alt="comic image" class="comic-image">
     <div class="comic-info">
-        <h2 class="comic-name">{{comicData.title}}</h2>
+        <h2 class="comic-name">{{comicData.title | titlecase}}</h2>
         <p class="comic-onsale"><span>Published:</span> {{comicData.onSaleDate | date: 'MMMM d, y, h:mm:ss a z'}}</p>
         <p class="comic-description">{{comicData.description}}</p>
         <p class="comic-upc"><span>UPC: </span>{{comicData.upc}}</p>

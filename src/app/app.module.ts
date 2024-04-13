@@ -14,6 +14,7 @@ import { SuperheroBannerComponent } from './components/superhero-banner/superher
 import { ComicCardComponent } from './components/comic-card/comic-card.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SuperheroBannerComponent,
     ComicCardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,

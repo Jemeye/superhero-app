@@ -34,6 +34,10 @@
             font-size: 14px
         }
 
+        @include medium-screen() {
+            padding: 20px 40px;
+        }
+
         .comics-detail-title{
             font-size: 40px;
 
@@ -44,15 +48,14 @@
 
         .comics-detail-container{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 800px));
+            gap: 30px;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             width: 100%;
             height: auto;
             padding: 50px 0;
             overflow-x: hidden;
-
         }
     }
    
@@ -75,12 +78,30 @@
 }
 
 .pagination ::ng-deep .ngx-pagination .current {
-    background: red;
+    background: var(--primary-color);
+    border-radius: 4px;
+
+    a{
+      padding: 5px 10px;
+    }
 }
 
 .pagination ::ng-deep .ngx-pagination li {
-    background: var(--medium-grey-color);
+    background: rgba(108, 117, 125, 0.2941176471);
+    color:var(--white);
     font-size: 14px;
+    border-radius: 4px;
+
+
+    a{
+        color:var(--white);
+        border-radius: 4px;
+        padding: 5px 10px;
+
+        &:hover{
+            color:var(--primary-color);
+        }
+    }
 }
 
 .no-results{

@@ -46,10 +46,11 @@
     .superhero-banner-info{
         position: relative;
         top: 50%;
+        transform: translateY(-50%);
         z-index: 2; 
         padding: 20px 100px; 
         color: white;
-        width: 50%;
+        width: 40%;
 
         @include small-screen() {
             padding: 20px 40px;
@@ -77,8 +78,9 @@
         }
 
         .superhero-banner-description{
-            margin-top: 20px;
+            margin-top: 30px;
             text-align: justify;
+            font-size: 18px;
         }
 
         .superhero-banner-modified{
@@ -89,7 +91,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 40px;
             width: 280px;
             height: 60px;
             padding: 10px 20px;

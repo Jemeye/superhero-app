@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { DTOSuperhero } from '../../interfaces/DTOSuperhero.type';
 import { catchError, throwError } from 'rxjs';
 import { DTOComic } from '../../interfaces/DTOComic.type';
-import { environment } from '../environment/environment';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
