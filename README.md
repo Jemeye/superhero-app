@@ -12,9 +12,9 @@ El proyecto es una aplicación web que ofrece la posibilidad de explorar una var
 - Explora una lista paginada de sus cómics y consulta detalles de cada uno. 
 
 ## Funcionalidades
-- Explora: Recorre una amplia lista de superhéroes y descubre sus historias y poderes.
+- Explora: Recorre una amplia lista de superhéroes.
 - Busca: Encuentra rápidamente a tu superhéroe favorito con nuestra búsqueda avanzada por nombre, cómic, serie o ID.
-- Descubre: Sumérgete en la información completa de cada superhéroe y sus aventuras.
+- Descubre: Sumérgete en la información completa de cada superhéroe.
 - Visualiza: Accede a una lista paginada de los cómics de cada superhéroe y explora sus historias gráficas.
 
 ## API
