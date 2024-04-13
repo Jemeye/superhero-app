@@ -1,4 +1,5 @@
 <div class="container">
+  <app-header></app-header>
   <app-search (superheroesFiltered)="updateSuperheroes($event)"></app-search>
   <div class="superhero-container"> 
     <app-superhero-card *ngFor="let item of superheroes | paginate: { itemsPerPage: 10, currentPage: page }" [superhero]="item"></app-superhero-card>
@@ -7,4 +8,5 @@
     No results for your search
   </span>
   <pagination-controls (pageChange)="page = $event" previousLabel="Prev" nextLabel="Next" class="pagination"></pagination-controls>
+  <app-footer></app-footer>
 </div>

@@ -12,6 +12,8 @@ import { ComicsComponent } from './pages/comics/comics.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SuperheroBannerComponent } from './components/superhero-banner/superhero-banner.component';
 import { ComicCardComponent } from './components/comic-card/comic-card.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ComicCardComponent } from './components/comic-card/comic-card.component
     ComicsComponent,
     HomeComponent,
     SuperheroBannerComponent,
-    ComicCardComponent
+    ComicCardComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

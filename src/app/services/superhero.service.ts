@@ -3,15 +3,16 @@ import { Injectable } from '@angular/core';
 import { DTOSuperhero } from '../../interfaces/DTOSuperhero.type';
 import { catchError, throwError } from 'rxjs';
 import { DTOComic } from '../../interfaces/DTOComic.type';
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SuperheroService {
 
-  private apiUrl = 'https://gateway.marvel.com:443/v1/public';
-  private apiKey = 'apikey=19d1c6a7cfc4518733f4927a0ca68fe2';
-  private hash='?ts=1&hash=7ab30bcefd9738b63c0d6804ebe3fd67'
+  private apiUrl = environment.apiUrl;
+  private apiKey = environment.apiKey;
+  private hash = environment.hash;
 
   constructor(private http: HttpClient) { }
 
