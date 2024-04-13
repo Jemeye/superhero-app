@@ -1,27 +1,37 @@
-# SuperheroApp
+# Superhero App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+## Descripción
+El proyecto es una aplicación web que ofrece la posibilidad de explorar una variedad de superheroes y sus información detallada. Además, de un buscador para filtar los superheroes y una página de cómics en dónde es posible visualizar todos los comics del superheroe.
 
-## Development server
+## Páginas
+### Página de Inicio (Home): 
+- Descubre una lista completa de superhéroes con información detallada y filtra con nuestro potente buscador.
+- Navega por páginas de héroes y descubre nuevos personajes increíbles.
+### Página de Comics (Comic):
+- Visualiza la información completa de cada superhéroe.
+- Explora una lista paginada de sus cómics y consulta detalles de cada uno. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
+- Explora: Recorre una amplia lista de superhéroes.
+- Busca: Encuentra rápidamente a tu superhéroe favorito con nuestra búsqueda avanzada por nombre, cómic, serie o ID.
+- Descubre: Sumérgete en la información completa de cada superhéroe.
+- Visualiza: Accede a una lista paginada de los cómics de cada superhéroe y explora sus historias gráficas.
 
-## Code scaffolding
+## API
+- Esta aplicación utiliza la API oficial de Marvel para brindarte información precisa y actualizada sobre tus superhéroes favoritos. Para más información, visita: https://developer.marvel.com/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalación
+- Clona el repositorio de GitHub.
+- Ejecuta npm install para instalar las dependencias.
+- Inicia la aplicación con ng serve.
 
-## Build
+## Uso
+- Al iniciar, la página muestra una lista de superheroes, posible navegar por la paginación para ver más superheroes. 
+- Si se desea buscar se debe escoger un párametro de búsqueda, en caso de que no se elija un párametro se buscara mediante el nombre. Para la búsqueda por comic o serie se debe ingresar el ID de estos. 
+- Es posible dar click en el botón de comic ubicado en la card de Superheroes para ver más detalle de estos y la lista de comics. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Preguntas Técnicas
+Las respuestas a las preguntas técnicas se encuentran en un documento de Word (.doc) dentro del repositorio de GitHub.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Vídeo
+En el siguiente Link se encuentra un vídeo explicativo de la aplicación: 
