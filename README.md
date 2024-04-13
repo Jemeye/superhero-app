@@ -1,15 +1,15 @@
 # Superhero App
 
 ## Descripción
-El proyecto es una aplicación web que ofrece la posibilidad de explorar una variedad de superheroes y sus información detallada. Además, de un buscador para filtar los superheroes y una página de comics en dónde es posible visualizar todos los comics del superheroe.
+El proyecto es una aplicación web que ofrece la posibilidad de explorar una variedad de superheroes y sus información detallada. Además, de un buscador para filtar los superheroes y una página de cómics en dónde es posible visualizar todos los comics del superheroe.
 
 ## Páginas
 ### Página de Inicio (Home): 
 - Descubre una lista completa de superhéroes con información detallada y filtra con nuestro potente buscador.
 - Navega por páginas de héroes y descubre nuevos personajes increíbles.
 ### Página de Comics (Comic):
-- Visualiza la información completa de cada superhéroe, incluyendo su historia, poderes y aliados.
-- Explora una lista paginada de sus cómics y accede a detalles de cada uno. 
+- Visualiza la información completa de cada superhéroe.
+- Explora una lista paginada de sus cómics y consulta detalles de cada uno. 
 
 ## Funcionalidades
 - Explora: Recorre una amplia lista de superhéroes y descubre sus historias y poderes.
