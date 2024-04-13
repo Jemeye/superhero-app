@@ -38,6 +38,7 @@ export class ComicsComponent implements OnInit {
   getSuperhero(){
     this.apiService.getSuperheroById(this.userId).subscribe((data) => {
       this.superhero = data.data.results[0];
+      console.log(this.superhero)
     })
 
   }
