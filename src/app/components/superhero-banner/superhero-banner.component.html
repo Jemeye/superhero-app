@@ -1,0 +1,10 @@
+<div class="superhero-banner">
+    <img [src]="superhero.thumbnail.path + '.' + superhero.thumbnail.extension" alt="superhero image" class="superhero-banner-image">
+    <div class="superhero-banner-info">
+        <span class="line"></span>
+        <h2 class="superhero-banner-name">{{superhero.name}}</h2>
+        <p class="superhero-banner-modified">{{superhero.modified | date: 'MMMM d, y, h:mm:ss a z'}}</p>
+        <p class="superhero-banner-description">{{superhero.description ? superhero.description : 'No description'}}</p>
+        <a class="superhero-banner-button" [href]="superhero.urls[0].url">View in Marvel page</a>
+    </div>  
+</div>

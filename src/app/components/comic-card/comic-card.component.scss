@@ -1,0 +1,74 @@
+.comic-card{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    height: 400px;
+    background-color: #6c757d4b;
+    border-radius: 14px;
+
+    .comic-image{
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+
+    .comic-info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "comic-name comic-name"
+        "comic-description comic-description" 
+        "comic-onsale comic-modified"
+        "comic-upc comic-price"
+        "comic-creators comic-creators"
+        "comic-characters comic-characters"
+        ;
+        padding:    20px;
+
+        p{
+            font-size: 14px;
+
+            span{
+                font-weight: 600;
+                color: var(--secondary-color);  
+            }
+        }
+
+        .comic-name{
+            grid-area: comic-name;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .comic-onsale{
+            grid-area: comic-onsale;
+            font-size: 12px;
+        }
+
+        .comic-modified{
+            grid-area: comic-modified;
+            font-size: 12px;
+        }
+
+        .comic-description{
+            grid-area: comic-description;
+        }
+
+        .comic-upc{
+            grid-area: comic-upc;
+        }
+
+        .comic-price{
+            grid-area: comic-price;
+        }
+
+        .comic-creators{
+            grid-area: comic-creators;
+        }
+
+        .comic-characters{
+            grid-area: comic-characters;
+        }
+        
+    }
+}

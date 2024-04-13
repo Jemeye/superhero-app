@@ -1,1 +1,13 @@
-<p>{{userId}}</p>
+<div class="superhero-detail-container">
+    <superhero-banner [superhero]="superhero"></superhero-banner>
+    <div class="comics-detail">
+        <h2 class="comics-detail-title">Comics</h2>
+        <div class="comics-detail-container">
+            <app-comic-card *ngFor="let item of comics | paginate: { itemsPerPage: 10, currentPage: page }" [comic]="item"></app-comic-card>
+        </div>
+    </div>   
+</div>
+<span *ngIf="comics.length === 0" class="no-results">
+    No comics available
+</span>
+<pagination-controls (pageChange)="page = $event" previousLabel="Prev" nextLabel="Next" class="pagination"></pagination-controls>

@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from "ngx-pagination";
 import { ComicsComponent } from './pages/comics/comics.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SuperheroBannerComponent } from './components/superhero-banner/superhero-banner.component';
+import { ComicCardComponent } from './components/comic-card/comic-card.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { HomeComponent } from './pages/home/home.component';
     SuperheroCardComponent,
     SearchComponent,
     ComicsComponent,
-    HomeComponent
+    HomeComponent,
+    SuperheroBannerComponent,
+    ComicCardComponent
   ],
   imports: [
     BrowserModule,

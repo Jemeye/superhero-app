@@ -1,0 +1,13 @@
+<div class="comic-card">
+    <img [src]="comicData.miniature" alt="comic image" class="comic-image">
+    <div class="comic-info">
+        <h2 class="comic-name">{{comicData.title}}</h2>
+        <p class="comic-onsale"><span>Published:</span> {{comicData.onSaleDate | date: 'MMMM d, y, h:mm:ss a z'}}</p>
+        <p class="comic-description">{{comicData.description}}</p>
+        <p class="comic-upc"><span>UPC: </span>{{comicData.upc}}</p>
+        <p class="comic-modified"><span>Modified: </span>{{comicData.modifiedDate | date: 'MMMM d, y, h:mm:ss a z'}}</p>
+        <p class="comic-price"><span>Price: </span>{{comicData.price | currency}}</p>
+        <p class="comic-creators"><span>Creators: </span>{{comicData.creators}} </p>   
+        <p class="comic-characters"><span>Characters: </span>{{comicData.characters}} </p>
+    </div> 
+</div>

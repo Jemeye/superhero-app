@@ -1,8 +1,10 @@
-<app-search (superheroesFiltered)="updateSuperheroes($event)"></app-search>
-<div class="superhero-container"> 
-  <app-superhero-card *ngFor="let item of superheroes | paginate: { itemsPerPage: 10, currentPage: page }" [superhero]="item"></app-superhero-card>
+<div class="container">
+  <app-search (superheroesFiltered)="updateSuperheroes($event)"></app-search>
+  <div class="superhero-container"> 
+    <app-superhero-card *ngFor="let item of superheroes | paginate: { itemsPerPage: 10, currentPage: page }" [superhero]="item"></app-superhero-card>
+  </div>
+  <span *ngIf="superheroes.length === 0" class="no-results">
+    No results for your search
+  </span>
+  <pagination-controls (pageChange)="page = $event" previousLabel="Prev" nextLabel="Next" class="pagination"></pagination-controls>
 </div>
-<span *ngIf="superheroes.length === 0" class="no-results">
-  No results for your search
-</span>
-<pagination-controls (pageChange)="page = $event" previousLabel="Prev" nextLabel="Next" class="pagination"></pagination-controls>

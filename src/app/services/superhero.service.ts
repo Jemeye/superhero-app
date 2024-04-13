@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DTOSuperhero } from '../../interfaces/DTOSuperhero.type';
 import { catchError, throwError } from 'rxjs';
+import { DTOComic } from '../../interfaces/DTOComic.type';
 
 @Injectable({
   providedIn: 'root'
@@ -57,6 +58,31 @@ export class SuperheroService {
   //function to get all the superheroes by serie
   getSuperheroesBySeries(serie: string){
     return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters${this.hash}&${this.apiKey}&series=${serie}`)
+    .pipe(
+      catchError((error: HttpErrorResponse) => {
+        if (error.status == 401) {
+          return throwError('You re not authorized, please try again later.');
+        }
+        return throwError('Something bad happened; please try again later.');
+      })
+    );
+  }
+
+  //function to get a single superheroe by id
+  getSuperheroById(id: number){
+    return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters/${id}${this.hash}&${this.apiKey}`)
+    .pipe(
+      catchError((error: HttpErrorResponse) => {
+        if (error.status == 401) {
+          return throwError('You re not authorized, please try again later.');
+        }
+        return throwError('Something bad happened; please try again later.');
+      })
+    );
+  }
+
+  getComicsBySuperhero(id: number){
+    return this.http.get<DTOComic>(`${this.apiUrl}/characters/${id}/comics${this.hash}&${this.apiKey}`)
     .pipe(
       catchError((error: HttpErrorResponse) => {
         if (error.status == 401) {
