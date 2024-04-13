@@ -34,4 +34,4 @@ El proyecto es una aplicación web que ofrece la posibilidad de explorar una var
 Las respuestas a las preguntas técnicas se encuentran en un documento de Word (.doc) dentro del repositorio de GitHub.
 
 ## Vídeo
-En el siguiente Link se encuentra un vídeo explicativo de la aplicación: 
+En el siguiente Link se encuentra un vídeo explicativo de la aplicación: https://youtu.be/QLXydKDDNKU
