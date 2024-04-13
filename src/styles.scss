@@ -1,0 +1,65 @@
+$white: #ffffff;
+$primary-color: #d00000;
+$secondary-color: #e85d04;
+$black-color: #03071e;
+$light-grey-color: #e9ecef;
+$dark-grey-color: #6c757d;
+$medium-grey-color: #b6bbbe;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --white: #{$white};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --black-color: #{$black-color};
+  --light-grey-color: #{$light-grey-color};
+  --dark-grey-color: #{$dark-grey-color};
+  --medium-grey-color: #{$medium-grey-color};
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 100vh;
+  font-size: 1.8rem;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--black-color);
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}

@@ -1,0 +1,13 @@
+<div class="superhero-card">
+    <div class="superhero-image">
+        <img [src]="superhero.thumbnail.path + '.' + superhero.thumbnail.extension" alt="superhero image">
+    </div>
+    <div class="superhero-info">
+        <h2 class="superhero-name">{{superhero.name}}</h2>
+        <p class="superhero-description">{{superhero.description ? superhero.description : 'No description'}}</p>
+        <p class="superhero-modified">{{superhero.modified | date: 'MMMM d, y, h:mm:ss a z'}}</p>
+    </div>
+    <div class="superhero-buttons">
+        <button class="superhero-button">Comics</button>
+    </div>      
+</div>

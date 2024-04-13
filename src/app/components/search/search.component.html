@@ -1,0 +1,15 @@
+<form class="search-form">
+    <div class="search-container">
+        <input class="search-input" type="text" placeholder="Search your superhero..." [(ngModel)]="searchTerm" name="searchTerm">
+        <button class="search-button" type="submit" (click)="search()">Search</button>
+    </div>
+    <div class="filter-container">
+        <div class="filter-item" *ngFor="let item of options">
+            <input class="filter-button" type="checkbox" [id]="item.id" [(ngModel)]="item.selected" (change)="onCheckboxChange(item)" name="name">
+            <label [for]="item.id"></label>
+            <span>{{item.label}}</span>
+        </div>
+    </div>
+    <span *ngIf="options[1].selected === true" class="disclaimer">If you want to search for a list of comics, remember to separate each id by comma.</span>
+    <span *ngIf="options[2].selected === true" class="disclaimer">If you want to search for a list of series, remember to separate each id by comma.</span>    
+</form>
