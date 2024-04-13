@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SuperheroService } from './services/superhero.service';
-import { Superhero } from '../interfaces/superhero.type';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,28 +6,6 @@ import { Superhero } from '../interfaces/superhero.type';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'superhero-app';
-
-  superheroes: Superhero[] = [];
-  page!: number;
-
-  constructor(
-    private apiService : SuperheroService
-  ) { }
-
-  ngOnInit(): void {
-    this.getSuperheroes();
-  }
-
-  getSuperheroes() {
-    this.apiService.getSuperheroes(0).subscribe((data) => {
-      this.superheroes = data.data.results
-    })
-  }
-
-  updateSuperheroes(superheroesFiltered: Superhero[]) {
-    console.log(superheroesFiltered)
-    this.superheroes = superheroesFiltered
-  }
 }

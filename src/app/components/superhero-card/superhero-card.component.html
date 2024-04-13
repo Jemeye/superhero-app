@@ -8,6 +8,6 @@
         <p class="superhero-modified">{{superhero.modified | date: 'MMMM d, y, h:mm:ss a z'}}</p>
     </div>
     <div class="superhero-buttons">
-        <button class="superhero-button">Comics</button>
+        <a class="superhero-button" [routerLink]="['/comics',superhero.id]">Comics</a>
     </div>      
 </div>

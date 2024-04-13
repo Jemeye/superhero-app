@@ -14,6 +14,8 @@ export class SuperheroService {
 
   constructor(private http: HttpClient) { }
 
+
+  //function to get all the superheroes from the API
   getSuperheroes(offset: number) {
     return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters${this.hash}&${this.apiKey}&limit=100&offset=${offset}`)
     .pipe(
@@ -26,6 +28,7 @@ export class SuperheroService {
     )
   }
 
+  //function to get all the superheroes by name
   getSuperheroesByName(name: string) {
     return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters${this.hash}&${this.apiKey}&name=${name}&nameStartsWith=${name}`)
     .pipe(
@@ -38,6 +41,7 @@ export class SuperheroService {
     )
   }
 
+  //function to get all the superheroes by comic
   getSuperheroesByComics(comic: string){
     return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters${this.hash}&${this.apiKey}&comics=${comic}`)
     .pipe(
@@ -50,15 +54,16 @@ export class SuperheroService {
     )
   }
 
+  //function to get all the superheroes by serie
   getSuperheroesBySeries(serie: string){
     return this.http.get<DTOSuperhero>(`${this.apiUrl}/characters${this.hash}&${this.apiKey}&series=${serie}`)
     .pipe(
       catchError((error: HttpErrorResponse) => {
-        if (error.status == 401){
+        if (error.status == 401) {
           return throwError('You re not authorized, please try again later.');
         }
         return throwError('Something bad happened; please try again later.');
       })
-    )
+    );
   }
 }

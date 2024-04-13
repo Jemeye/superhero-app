@@ -35,6 +35,7 @@ export class SearchComponent {
     }
   ]
 
+  //function to select all the options
   onCheckboxChange(selectedOption: Option) {
     this.options.forEach(option => {
       if (option !== selectedOption) {
@@ -43,8 +44,8 @@ export class SearchComponent {
     });
   }
 
+  //function to search by name, comic or serie
   search(){
-
     let query : string = this.searchTerm.trim();
 
     if(this.options[1].selected === true){
